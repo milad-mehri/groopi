@@ -13,6 +13,8 @@ html, body {
 
 }
 
+/* header */
+
 #header {
 
     width: 90vw;
@@ -53,8 +55,61 @@ a:hover {
     font-size: 30px;
 }
 
+/* main */
+
+#main {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#slogan {
+    font-style: normal;
+    font-weight: 700;
+    color: inherit;
+    font-size:  max(min(4.5vw , 50px), 30px);
+}
+
+#mleft {
+    width: 55%;
+}
+
+.hide {
+    visibility: visible;
+    display: block;
+}
+
+
+
+
+
+
 @media only screen and (max-width: 610px) {
-    .hide{
+
+    .hide {
         visibility: hidden;
+        display: none;
+
+    }
+    #mleft {
+        width: 90%;
+    }
+}
+
+#note {
+    visibility: hidden;
+    display: none;
+
+}
+
+@media only screen and (max-width: 415px) {
+    #everything {
+        visibility: hidden;
+        display: none;
+    }
+
+    #note {
+        visibility: visible;
     }
 }
