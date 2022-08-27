@@ -3,5 +3,24 @@
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "http": "^0.0.1-security"
-  }
+  },
+  "name": "groopi",
+  "description": "",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milad-mehri/groopi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milad-mehri/groopi/issues"
+  },
+  "homepage": "https://github.com/milad-mehri/groopi#readme"
 }
