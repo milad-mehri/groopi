@@ -8,6 +8,10 @@ html, body {
   color: #0D0D0D;
 }
 
+#error {
+  color: #CB0000;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -108,8 +112,8 @@ a:hover {
   font-size: max(min(4.5vw, 50px), 30px);
 }
 
-/* start button */
-#start {
+/* big orange buttons */
+.main-button {
   padding: 20px;
   border-radius: 10px;
   border: 0px;
@@ -121,7 +125,7 @@ a:hover {
   width: 150px;
 }
 
-#start:hover {
+.main-button:hover {
   background-color: black;
   color: #FF8E3C;
 }
@@ -173,4 +177,21 @@ a:hover {
 
 #footer-right {
   text-align: right;
+}
+
+/* signup */
+.signup-input {
+  margin: 10px 0;
+  padding: 15px;
+  color: #555;
+  border-radius:  10px;
+  background-color: #DADADA;
+  border: none;
+  outline: none;
+}
+
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
 }
