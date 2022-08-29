@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Groopi">
+    <title>Groopi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div id="note">This website is unavailable on mobile :(</div>
+
+    <div id="container">
+
+      <div id="header">
+        <div id="hleft">
+          <a href="/" id="title" class="navbutton">Groopi</a>
+          <a href="aboutus" class="hide navbutton">About Us</a>
+        </div>
+        <div id="hright">
+          <% if(!user){ %>
+            <form action="auth/google">
+              <button type="submit" id="login-button">
+                Login with Google
+              </button>
+            </form>
+
+          <% } else {%>
+            <a id="username" href="/profile"><%= user.screenName %></a>
+            <a id="logout-link" href="/logout">Logout</a>
+          <% } %>
+        </div>
+      </div>
+
+      <div id="profile-container">
+        <table style="width:100%">
+          <tr>
+            <th>Email</th>
+            <td><%= user.email %></td>
+          </tr>
+          <tr>
+            <th>Screen Name</th>
+            <td><%= user.screenName %></td>
+          </tr>
+          <tr>
+            <th>Name</th>
+            <td><%= user.name %></td>
+          </tr>
+          <tr>
+            <th>Profile Picture</th>
+            <td>
+              <img src="<%= user.profileImage %>" referrerpolicy="no-referrer">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="footer">
+        <div class="main-section">
+          <div class="horizontal-section footer-section footer-left">
+            <h1>Groopi</h1>
+            Reach your fullest academic potential with Groopi
+          </div>
+
+          <div class="horizontal-section">
+            <img class="hide" src="/img/logo.png" width="80">
+          </div>
+
+          <div class="horizontal-section footer-section" id="footer-right">
+            <h3>About groopi</h3>
+            <a href="aboutus">About us</a>
+            <a href="contactus">Contact us</a>
+            <a href="supportus">Support us</a>
+            <a href="https://youtu.be/8G0omjVSh_U">Among us 📮</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -195,3 +195,35 @@ a:hover {
   flex-direction: column;
   margin: 20px;
 }
+
+/* header account related links */
+#logout-link {
+  margin-left: 20px;
+}
+
+#username {
+  margin-right: 20px;
+}
+
+/* profile */
+#profile-container {
+  margin: 20px;
+}
+
+th {
+  width: 20%;
+  text-align: left;
+}
+
+td, th {
+  border: 2px solid black;
+}
+
+th, td {
+  padding: 20px;
+  margin: 0;
+}
+
+table {
+  margin-bottom: 350px;
+}

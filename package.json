@@ -1,11 +1,15 @@
 {
   "dependencies": {
     "body-parser": "^1.20.0",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "http": "^0.0.1-security",
-    "mongoose": "^6.5.3"
+    "mongoose": "^6.5.3",
+    "passport": "^0.5.3",
+    "passport-google-oauth20": "^2.0.0"
   },
   "name": "groopi",
   "description": "",
@@ -13,7 +17,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "npx nodemon app.js -L"
   },
   "repository": {
     "type": "git",
@@ -24,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/milad-mehri/groopi/issues"
   },
-  "homepage": "https://github.com/milad-mehri/groopi#readme"
+  "homepage": "https://github.com/milad-mehri/groopi#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }

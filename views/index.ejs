@@ -19,11 +19,16 @@
       <div id="header">
         <div id="hleft">
           <a href="/" id="title" class="navbutton">Groopi</a>
-          <a href="aboutus" class="hide navbutton">About Us <i class="fa-solid fa-angle-down"></i></a>
+          <a href="aboutus" class="hide navbutton">About Us</a>
         </div>
         <div id="hright">
-          <a href="login" class="navbutton">Login</a>
-          <a href="signup" class="navbutton">Signup</a>
+          <% if(!user){ %>
+            <a id="login-link" class="navbutton" href="auth/google">Login with Googe</a>
+
+          <% } else {%>
+            <a id="username" href="/profile"><%= user.screenName %></a>
+            <a id="logout-link" class="navbutton" href="/logout">Logout</a>
+          <% } %>
         </div>
       </div>
 
@@ -35,10 +40,12 @@
               academic potential <br>
               with <span style="color:#FF8E3C">Groopi</span>
             </div>
-  
-            <button class="main-button">
-              Get Started
-            </button>
+            
+            <form action="auth/google">
+              <button type="submit" class="main-button">
+                Get Started
+              </button>
+            </form>
   
             <div class="description">
               <h2 class="description-title">
@@ -79,7 +86,7 @@
         </div>
         <div class="main-section" id="info-flex">
           <div class="horizontal-section">
-            <img class="hide" src="http://placekitten.com/400/300"> 
+            <img class="hide" src="http://placekitten.com/500/300"> 
           </div>
           <div class="horizontal-section">
             <div class="description">
@@ -87,7 +94,13 @@
                 Connect with friends & track progress 
               </h2>
               <div class="description-text">
-                Message your friends and create study rooms with Groopi’s communication system,  
+                Message your friends and create study rooms with Groopi’s communication system, 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in sodales urna, 
+                a ornare quam. Sed viverra lacus id tincidunt finibus. Cras congue metus sit 
+                amet metus efficitur, vel scelerisque tortor tristique. Morbi auctor ultricies 
+                dui ac tincidunt. Phasellus porttitor ante a facilisis ullamcorper. Nulla eget 
+                ipsum a leo viverra tincidunt ut et felis. Nam elit mauris, ullamcorper ac tempus 
+                porta, ultricies nec neque. Aenean ex turpis, mollis vel interdum at, efficitur eu arcu.
               </div>
             </div>
           </div>
