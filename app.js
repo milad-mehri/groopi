@@ -84,7 +84,7 @@ passport.use(
           profileImage: profile._json['picture'],
           email: profile._json.email
         }).save().then((newUser) => {
-            done(null, newUser);
+          done(null, newUser);
         });
       }
     });
