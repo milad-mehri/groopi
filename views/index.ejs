@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Groopi">
-    <title>Groopi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
-      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
-  </head>
 
-  <body>
-    <div id="note">This website is unavailable on mobile :(</div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Groopi">
+  <title>Groopi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+</head>
 
-    <div id="container">
+<body>
+  <div id="note">This website is unavailable on mobile :(</div>
 
+  <div id="container">
+
+    <div id="header">
+      <div id="hleft">
+        <a href="/" id="title" class="navbutton">Groopi</a>
+        <a href="aboutus" class="hide navbutton">About Us</a>
+      </div>
+      <div id="hright">
+        <% if(!user){ %>
+          <a id="login-link" class="navbutton" href="auth/google">Login with Googe</a>
       <div id="header">
         <div id="hleft">
           <a href="/" id="title" class="navbutton">Groopi</a>
@@ -24,109 +33,127 @@
         <div id="hright">
           <% if(!user){ %>
             <a id="login-link" class="navbutton" href="auth/google">Login with Google</a>
+>>>>>>> 9b2b4dff312812956160ca11d54605cfd4fd00a7
 
           <% } else {%>
-            <a id="username" href="/profile"><%= user.screenName %></a>
+            <a id="username" href="/profile">
+              <%= user.screenName %>
+            </a>
             <a id="logout-link" class="navbutton" href="/logout">Logout</a>
-          <% } %>
+            <% } %>
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="main-section">
+        <div class="horizontal-section">
+          <div id="slogan">
+            Reach your fullest <br>
+            academic potential <br>
+            with <span style="color:#FF8E3C">Groopi</span>
+          </div>
+
+          <form action="auth/google">
+            <button type="submit" class="main-button">
+              Get Started
+            </button>
+          </form>
+
+          <div class="description">
+            <h2 class="description-title">
+              No time to meet up and study? Groopi has your back!
+            </h2>
+            <div class="description-text">
+              With handy study tools like Pomodoro timers and chatting with your friends,
+              Groopi users have no trouble staying on task and improving their grades together!
+            </div>
+          </div>
+        </div>
+
+        <div class="horizontal-section">
+          <img class="hide" src="/img/logo.png" width="500">
         </div>
       </div>
+    </div>
 
-      <div id="main">
-        <div class="main-section">
-          <div class="horizontal-section">
-            <div id="slogan">
-              Reach your fullest <br>
-              academic potential <br>
-              with <span style="color:#FF8E3C">Groopi</span>
-            </div>
-            
-            <form action="auth/google">
-              <button type="submit" class="main-button">
-                Get Started
-              </button>
-            </form>
-  
-            <div class="description">
-              <h2 class="description-title">
-                No time to meet up and study? Groopi has your back!
-              </h2>
-              <div class="description-text">
-                With handy study tools like Pomodoro timers and chatting with your friends, 
-                Groopi users have no trouble staying on task and improving their grades together!
-              </div>
+    <div id="info">
+      <h1 id="info-title">Features & Benefits</h1>
+      <div class="main-section" id="info-flex">
+        <div class="horizontal-section">
+          <div class="description">
+            <h2 class="description-title">
+              Pomodoro timer & to-do lists
+            </h2>
+            <div class="description-text">
+              Groopi is equipped with a user-friendly pomodoro timer and a to-do list organizer!
+              Simply input tasks in order of importance and choose a time limit to complete them,
+              and Groopi will distribute the tasks in the most effective way possible to get the
+              most out of your study session!
             </div>
           </div>
-  
-          <div class="horizontal-section">
-            <img class="hide" src="/img/logo.png" width="500"> 
-          </div>
+        </div>
+        <div class="horizontal-section">
+          <img class="hide" src="http://placekitten.com/400/300">
         </div>
       </div>
-
-      <div id="info">
-        <h1 id="info-title">Features & Benefits</h1>
-        <div class="main-section" id="info-flex">
-          <div class="horizontal-section">
-            <div class="description">
-              <h2 class="description-title">
-                Pomodoro timer & to-do lists
-              </h2>
-              <div class="description-text">
-                Groopi is equipped with a user-friendly pomodoro timer and a to-do list organizer! 
-                Simply input tasks in order of importance and choose a time limit to complete them, 
-                and Groopi will distribute the tasks in the most effective way possible to get the 
-                most out of your study session!
-              </div>
-            </div>
-          </div>
-          <div class="horizontal-section">
-            <img class="hide" src="http://placekitten.com/400/300"> 
-          </div>
+      <div class="main-section" id="info-flex">
+        <div class="horizontal-section">
+          <img class="hide" src="http://placekitten.com/500/300">
         </div>
-        <div class="main-section" id="info-flex">
-          <div class="horizontal-section">
-            <img class="hide" src="http://placekitten.com/500/300"> 
-          </div>
-          <div class="horizontal-section">
-            <div class="description">
-              <h2 class="description-title">
-                Connect with friends & track progress 
-              </h2>
-              <div class="description-text">
-                Message your friends and create study rooms with Groopi’s communication system, 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in sodales urna, 
-                a ornare quam. Sed viverra lacus id tincidunt finibus. Cras congue metus sit 
-                amet metus efficitur, vel scelerisque tortor tristique. Morbi auctor ultricies 
-                dui ac tincidunt. Phasellus porttitor ante a facilisis ullamcorper. Nulla eget 
-                ipsum a leo viverra tincidunt ut et felis. Nam elit mauris, ullamcorper ac tempus 
-                porta, ultricies nec neque. Aenean ex turpis, mollis vel interdum at, efficitur eu arcu.
-              </div>
+        <div class="horizontal-section">
+          <div class="description">
+            <h2 class="description-title">
+              Connect with friends & track progress
+            </h2>
+            <div class="description-text">
+              Message your friends and create study rooms with Groopi’s communication system,
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in sodales urna,
+              a ornare quam. Sed viverra lacus id tincidunt finibus. Cras congue metus sit
+              amet metus efficitur, vel scelerisque tortor tristique. Morbi auctor ultricies
+              dui ac tincidunt. Phasellus porttitor ante a facilisis ullamcorper. Nulla eget
+              ipsum a leo viverra tincidunt ut et felis. Nam elit mauris, ullamcorper ac tempus
+              porta, ultricies nec neque. Aenean ex turpis, mollis vel interdum at, efficitur eu arcu.
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="footer">
-        <div class="main-section">
-          <div class="horizontal-section footer-section footer-left">
-            <h1>Groopi</h1>
-            Reach your fullest academic potential with Groopi
-          </div>
-
-          <div class="horizontal-section">
-            <img class="hide" src="/img/logo.png" width="80">
-          </div>
-
-          <div class="horizontal-section footer-section" id="footer-right">
-            <h3>About groopi</h3>
-            <a href="aboutus">About us</a>
-            <a href="contactus">Contact us</a>
-            <a href="supportus">Support us</a>
-            <a href="https://youtu.be/8G0omjVSh_U">Among us 📮</a>
           </div>
         </div>
       </div>
     </div>
-  </body>
+
+    <div id="footer">
+      <div class="main-section">
+        <div class="horizontal-section footer-section footer-left">
+          <h1>Groopi</h1>
+          Reach your fullest academic potential with Groopi
+        </div>
+
+        <div class="horizontal-section">
+          <img class="hide" id="ee" src="/img/logo.png" width="80">
+
+        </div>
+
+        <div class="horizontal-section footer-section" id="footer-right">
+          <h3>About groopi</h3>
+          <a href="aboutus">About us</a>
+          <a href="contactus">Contact us</a>
+          <a href="supportus">Support us</a>
+          <a href="https://youtu.be/8G0omjVSh_U">Among us 📮</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  var timesclicked = 0
+  var image = document.getElementById("ee");
+  image.onclick = function (e) {
+    timesclicked += 1
+    if (timesclicked === 10) {
+      document.body.innerHTML = ` <img id="ee" src="/img/animated_logo.gif">`
+      document.getElementById("ee").style.width = "100vw";
+    }
+  }
+
+</script>
+
 </html>
